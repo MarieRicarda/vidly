@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--font-awesome -->
+    <script src="https://kit.fontawesome.com/5584578d4b.js" crossorigin="anonymous"></script>
+
+    <!--link to css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- icon link-->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇰🇷</text></svg>">
+
+    <title>Learn Korean App</title>
+    <script>
+
+      function playMyAudio() {
+         document.getElementById("myAudio").play();
+         let displayField = document.getElementById("title-display").innerHTML = "hello";
+      }
+
+    function play(str) {
+    	if (str === "q" || str === "Q") {
+			let displayFielda = document.getElementById('korean-phonetics').innerHTML = "annyeonghaseyo";
+      let displayField = document.getElementById('english-display').innerHTML = "Hello!";
+      } else if (str === "w" || str === "W") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "Korea";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "han gug";
+
+    	 } else if (str === "e" || str === "E") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "person";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "saram";
+
+    	}	else if (str === "s" || str === "S") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "pumkin";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "hobak";
+
+    	}	else if (str === "a" || str === "A") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "pot";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "sot";
+
+    	}	else if (str === "d" || str === "D") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "wall";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "byeok";
+
+    	 }	else if (str === "z" || str === "Z") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "red";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "ppalgang";
+
+    	}else if (str === "x" || str === "X") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "body";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "mom";
+
+    	}else if (str === "c" || str === "C") {
+    	 	let displayField = document.getElementById('english-display').innerHTML = "clothes";
+        let displayFielda = document.getElementById('korean-phonetics').innerHTML = "ot";
+
+      }
+    		
+    		var audio = document.getElementById(str);
+    		audio.play();
+    	}
+    	
+    	window.document.onkeyup = function(event) {
+    		let keystroke = event.key
+    	 	if (keystroke === "q" || keystroke === "Q") {
+    	 		play("Q");
+    	 	} else if (keystroke === "w" || keystroke === "W") {
+    	 		play("W");
+    	 	} else if (keystroke === "e" || keystroke === "E") {
+    	 		play("E");
+    		}	else if (keystroke === "s" || keystroke === "S") {
+    	 		play("S");
+    		}	else if (keystroke === "a" || keystroke === "A") {
+    	 		play("A");
+    		}	else if (keystroke === "d" || keystroke === "D") {
+    	 		play("D");
+    	 	}	else if (keystroke === "z" || keystroke === "Z") {
+    	 		play("Z");
+    		}	else if (keystroke === "x" || keystroke === "X") {
+    	 		play("X");
+    		}	else if (keystroke === "c" || keystroke === "C") {
+    		 	play("C");
+    		}
+    }
+
+
+    </script>
+  </head>
+  <body style="background-color: darkslategrey;">
+  	<div class="container pl-5 pr-5 text-white-50">
+      <div class="row text-center">
+        <div class="col my-3">
+          <div class="text-center">
+            <h4 class="text-center text-warning" id="title-display"></h4>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <button type="button" class="btn btn-warning btn-block" id="title-button" onClick="playMyAudio()">
+            <span class="play-icon">
+              <i class='fas fa-play'></i> 
+            </span>
+              <h1>Let's Learn Korean!</h1>
+            <audio src="./clip/youTube.ogg" id="myAudio"></audio>
+          </button>
+        </div> <!--"col" --> 
+    	</div> <!--"row text-center" -->
+
+
+      <div class="row text-center">
+        <div class="col my-3">
+          <div class="text-center mb-1" >
+            <h4 class="text-center text-warning center-display" id="korean-phonetics"></h4>
+          </div> <!--"korean-phonetics" -->
+    			<div class="text-center">
+            <h4 class="text-center text-warning" id="english-display"></h4>
+          </div> <!--"display" -->
+    	  </div> <!--"col" --> 
+      </div> <!--"row text-center" -->
+     
+      <div class="row text-center mb-3">
+        <div class="col-4">
+          <button class="drum-pad btn btn-block btn-info" id="drum-0" onclick="play('Q')">
+    		        안녕하세요! 🙋🏻‍♀️ 
+    		    <audio src="./clip/im-okay.ogg" class="clip" id="Q"></audio>
+    	     </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-1" onclick="play('W')">
+    	       	한국 🇰🇷
+    		    <audio src="./clip/Mom.ogg" class="clip" id="W"></audio>
+    	     </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-2" onclick="  play('E')">
+    		        사람 🧍🏻 
+    		    <audio src="./clip/i-love-you.ogg" class="clip" id="E"></audio>
+    	    </button> 
+        </div> <!--"col-4" -->
+
+        <div class="col-4">
+          <button class="drum-pad btn btn-block btn-info" id="drum-3" onclick="play('S')">
+    		      호박 
+              <span class="button-icon">
+                <img class="pumpkin" src="./images/pumpkin.png">
+              </span> 
+    		    <audio src="./clip/FatherDad.ogg" class="clip" id="S"></audio>
+          </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-3" onclick=  "play('A')">
+    		        솥 
+                <span class="button-icon">
+                  <img class="pot" src="./images/pot.png">
+                </span>
+            <audio src="./clip/answering-the-phone.ogg" class="clip" id="A"></audio>
+          </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-5" onclick="play('D')">
+    	   	     벽 
+               <span class="button-icon">
+                 <img class="wall" src="./images/medieval-wall.png">
+               </span>
+            <audio src="./clip/russell-and-marie.ogg" class="clip" id="D"></audio>
+          </button> 
+        </div> <!--"col-4" -->
+
+        <div class="col-4">
+          <button class="drum-pad btn btn-block btn-info" id="drum-6" onclick="play('Z'    )">
+    		       빨강 
+               <span class="button-icon">  🔴 </span>
+    		    <audio src="./clip/russell.ogg" class="clip" id="Z"></audio>
+          </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-7" onclick="play('X')">
+    		      몸 <img class="body" src="./images/single-person.png">
+    		      <audio src="./clip/Marie.ogg" class="clip" id="X"></audio>
+          </button> 
+          <button class="drum-pad btn btn-block btn-info" id="drum-8" onclick="play('C')">
+    		       👕 옷 👖
+    		      <audio src="./clip/makefile.ogg" class="clip" id="C"></audio>
+          </button> 
+        </div> <!--"col-4" -->
+      </div> <!--"row text-center" -->
+      <div class="row mt-5">
+        <div class="col ">
+          <div class="float-right text-white-50">
+            <h5>
+              <a class="link" href="#" target="_blank">Design & Code by Marie</a>
+            </h5>
+          </div> <!--"float-right" -->
+        </div> <!--"col" --> 
+        
+      </div> <!--"row" -->
+
+      <div class="row mt-5">
+        <div class="col ">
+          <div class="text-center text-info">
+            <h6>
+
+              <a href="https://www.flaticon.com/free-icons/pumpkin" title="pumpkin icons">Pumpkin icons created by Freepik - Flaticon</a>
+
+               <a href="https://www.flaticon.com/free-icons/body" title="body icons">Body icons created by Sir.Vector - Flaticon</a>
+
+      <a href="https://www.flaticon.com/free-icons/kitchen" title="kitchen icons">Kitchen icons created by surang - Flaticon</a>
+
+      <a href="https://www.flaticon.com/free-icons/wall" title="wall icons">Wall icons created by vectorsmarket15 - Flaticon</a>
+            </h6>
+          </div> <!--"float-right" -->
+        </div> <!--"col" --> 
+        
+      </div> <!--"row" -->
+
+     
+  	</div> <!--"container" -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha383-DfXdz2htPH0lsSSs5nCTpuj/zy3C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha383-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+   
+    
+    
+  </body>
+</html>

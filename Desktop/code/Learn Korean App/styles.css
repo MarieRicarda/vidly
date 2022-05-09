@@ -1,0 +1,57 @@
+.button-icon {
+	padding-left: 3px;
+}
+
+.center-display {
+	font-style: italic;
+}
+
+.fas {
+	font-size: 30px;
+}
+
+h1 {
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.link {
+	color: wheat;
+}
+
+.play-icon i {
+		float: left;
+		
+  	margin-left: 300px;
+  	text-align: center;
+  	vertical-align: middle;
+  	padding-top: 12px;
+  	
+}
+
+
+
+.body,
+.pot,
+.pumpkin,
+.wall {
+	height: 23px;
+	width: 23px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .play-icon {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */ 
+@media only screen and (max-width: 1000px) {
+  .play-icon {
+  	display: none;
+  }
+}
+
+
